@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DziennikTanowania.Views.LogList"
+             Title="Rejestr"
+             x:Name="root">
+    
+    <ContentPage.ToolbarItems>
+        
+        
+        <ToolbarItem Text="Dodaj" Clicked="DodajButtonClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="FuelingLogsListView" 
+                ItemsSource="{Binding FuelingLogList}"
+                VerticalOptions="FillAndExpand"
+                 HasUnevenRows="true"
+                 IsPullToRefreshEnabled="false"
+                 CachingStrategy="RecycleElement"
+                 SelectedItem="{Binding SelectedFuelingLog , Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout  BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Margin="10,5" >
+                                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                    <BoxView Color="#2196F3" WidthRequest="20"/>
+                                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Fill" Spacing="0" Margin="0">
+                                        <Label Text="{Binding DateTime , StringFormat='{0:dd.MM.yyyy}'  }"
+                                    LineBreakMode="NoWrap" 
+                                    FontAttributes="Bold"
+                                    FontSize="Small" />
+                                        <Label Text="{Binding MilesPerLiter} " 
+                                    LineBreakMode="NoWrap"
+                                    HorizontalOptions="CenterAndExpand"           
+                                    FontSize="Large" 
+                                    FontAttributes="Bold"/>
+                                        <Label Text="l/100km" HorizontalOptions="Center" FontSize="Micro" Margin="0,0,0,5" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                                        <BoxView Color="Gray" WidthRequest="1" />
+                                    </StackLayout>
+                                    
+                                    
+                                    <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding ActualMileage}" FontAttributes="Bold" FontSize="Medium"  Margin="10,0"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding DistanceFromLastRefueling , StringFormat='+{0}km' }" FontSize="Small" FontAttributes="Bold" />
+                                            <BoxView Color="Gray" WidthRequest="1" Margin="0,3" HeightRequest="10"/>
+                                            <Label Text="{Binding TotalPrice, StringFormat='+{0}PLN' }" FontSize="Small" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                        
+                                        
+                                    </StackLayout>
+                                    
+
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

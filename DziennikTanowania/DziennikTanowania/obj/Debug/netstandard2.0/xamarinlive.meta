@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\App.xaml</FilePath>
+      <Hash>C1-AE-16-5A-C8-E0-66-2C-79-46-79-62-FB-18-EF-4B</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\Views\AddLog.xaml</FilePath>
+      <Hash>88-3D-67-E6-9D-18-B5-C5-CA-8A-85-75-75-A9-48-E9</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\Views\LogDetail.xaml</FilePath>
+      <Hash>CE-8C-1A-81-50-08-04-83-DC-E1-C4-C4-2A-DA-72-35</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\Views\LogList.xaml</FilePath>
+      <Hash>D8-88-DD-25-4D-89-F2-02-05-0A-0F-1D-2E-47-B2-F7</Hash>
+      <Properties>
+        <string>Title</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\Views\MainPage.xaml</FilePath>
+      <Hash>70-26-1F-D5-8A-6D-E3-A1-04-D8-22-93-62-7B-9A-46</Hash>
+      <Properties>
+        <string>BackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\Views\StatystykiPage.xaml</FilePath>
+      <Hash>9D-40-6B-88-B2-46-67-79-89-E9-D5-CD-ED-EC-B1-B0</Hash>
+      <Properties>
+        <string>Title</string>
+        <string>BackgroundColor</string>
+      </Properties>
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

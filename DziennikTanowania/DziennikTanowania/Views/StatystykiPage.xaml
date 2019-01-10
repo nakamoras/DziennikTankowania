@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DziennikTanowania.Views.StatystykiPage"
+             Title="Statystyki"
+             BackgroundColor="LightGray">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ustaw pojemność baku" Command="{Binding SetTankCapacity}"/>
+    </ContentPage.ToolbarItems>  
+
+<ContentPage.Content>
+    
+        
+        <ScrollView>
+            <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Spacing="5" Margin="3">
+                <StackLayout Spacing="5" VerticalOptions="Start" HorizontalOptions="FillAndExpand"  BackgroundColor="White">
+                    <Label Text="Spalanie ogólne (l/100km):" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Label Text="{Binding TotalMilesPerLiter , Mode=TwoWay}" FontSize="42" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+                </StackLayout>
+                
+                <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand"   BackgroundColor="White">
+                    <Label Text="Spalanie z ostatniego tankowania (l/100km):" FontSize="Medium" HorizontalOptions="Center" />
+                    <Label Text="{Binding LatestMilesPerLiter , Mode=TwoWay}" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand"   BackgroundColor="White">
+                    <Label Text="Przewidywany zasięg na pełnym zbiorniku (km):" FontSize="Medium" HorizontalOptions="Center" />
+                    <Label Text="0" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                        <Label Text="Średni koszt przejazdu 1km:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding AverageCostOfOneKilometer , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"  BackgroundColor="White">
+                        <Label Text="Dystans pokonany na 1 litrze:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding DistanceForOneLiter , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+               </StackLayout>
+
+                <StackLayout  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                    
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                        <Label Text="Ogółem wydatki na paliwo:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding TotalExpensesOnFuel , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+                    
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                        <Label Text="Ogółem litry:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding TotalLiters , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+                    
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                        <Label Text="Ogółem dystans (km):" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding TotalDistance , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+                    
+                    <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"  BackgroundColor="White">
+                        <Label Text="Liczba tankowań:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                        <Label Text="{Binding NumberOfRefuelings , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="White">
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Maksymalnie zatankowano (l):" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding MaxLiters , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Minimalnie zatankowano (l):" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding MinLiters , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Najdrożej za litr:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding MostExpensiveLiter , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Najtaniej za litr:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding CheapestLiter , Mode=TwoWay }" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Najgorsze cząstkowe spalanie:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding WorstPartialMilesPerLiter , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"   BackgroundColor="White">
+                            <Label Text="Najlepsze cząstkowe spalanie:" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Medium" Margin="10,0"/>
+                            <Label Text="{Binding BestPartialMilesPerLiter , Mode=TwoWay}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="Medium"  FontAttributes="Bold" Margin="10,0"/>
+                        </StackLayout>
+                    
+                </StackLayout>
+
+            </StackLayout>
+            
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

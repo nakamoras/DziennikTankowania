@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.1.2" />
+    <PackageReference Include="LiveXAML" Version="2.1.58" />
+    <PackageReference Include="sqlite-net-standard" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />  
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\AddLog.xaml.cs">
+      <DependentUpon>AddLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LogDetail.xaml.cs">
+      <DependentUpon>LogDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LogList.xaml.cs">
+      <DependentUpon>LogList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StatystykiPage.xaml.cs">
+      <DependentUpon>StatystykiPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

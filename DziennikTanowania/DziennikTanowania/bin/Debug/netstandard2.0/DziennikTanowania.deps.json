@@ -1,0 +1,175 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "3f2c041f11b84aed25cf3e08ea92cf3c16de1a4e"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "DziennikTanowania/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.1.2",
+          "LiveXAML": "2.1.58",
+          "NETStandard.Library": "2.0.3",
+          "Xamarin.Forms": "3.4.0.1008975",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "runtime": {
+          "DziennikTanowania.dll": {}
+        }
+      },
+      "FluentValidation/8.1.2": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.2.0"
+          }
+        }
+      },
+      "LiveXAML/2.1.58": {},
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.bundle_green": "1.1.5"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {
+            "assemblyVersion": "1.5.1.0",
+            "fileVersion": "1.5.1.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.5": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.core": "1.1.5"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1.1.5": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.6.25921.2"
+          }
+        }
+      },
+      "Xamarin.Forms/3.4.0.1008975": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DziennikTanowania/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentValidation/8.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xLK59Y1itHq3ni1M79GtO3GlzLnDWwoud/lC4BUOQaKfHPjsRw5z/dvXuG1Inmt0qKRO8m90kEzjNlxL4mb6Uw==",
+      "path": "fluentvalidation/8.1.2",
+      "hashPath": "fluentvalidation.8.1.2.nupkg.sha512"
+    },
+    "LiveXAML/2.1.58": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jVdTYUsr+2qWnQclqgvItYPm6fmHAqrwaTlWeDT9VDY8hVjw8VB//9ASb+HPfbDyaDTG2K65NUWGmaS9zTIkzA==",
+      "path": "livexaml/2.1.58",
+      "hashPath": "livexaml.2.1.58.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "sqlite-net-standard/1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uRiNFIRTXKRwNT9+MzdKvcO+ganxhLlHcBENpmN2BaJKIUqD8HHrqZubMnNs6wimb2gCzRdsFyaY3MpMcTLQCQ==",
+      "path": "sqlite-net-standard/1.5.1",
+      "hashPath": "sqlite-net-standard.1.5.1.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_green/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1iFD+xBp+F4bGNX2qHqWw5khFmK6jW8U+Fo/cQYfOMssVSi2ZZEwg0CCxRr9AGPDsRnh9ZWFM/hp9K35gcc4WA==",
+      "path": "sqlitepclraw.bundle_green/1.1.5",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f5PoVZnZ1Y3wddUxW4Y/VVysT7H5PmoeznUVi7FC5EYq3GDV9qQVkY9PUcLYPkXF2fEa3qZjKiIsg/Oruf3dzQ==",
+      "path": "sqlitepclraw.core/1.1.5",
+      "hashPath": "sqlitepclraw.core.1.1.5.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/8XSRz3cgSSPEdiV6UFhlfk6/FX9P10MAja4XPCyMCz7/0YTqjtCh4e0jjLYOCJL8jK7O/vhtUjYo1TOSuPngQ==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.4.0.1008975": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-036/h8HtzRFgTrfhY57IeHoYRsPTO2XTA6uUFdmZzw2QR1sdszfofhI9HrCJTRx6fCzmjPg5Cxk5chYrjKarNw==",
+      "path": "xamarin.forms/3.4.0.1008975",
+      "hashPath": "xamarin.forms.3.4.0.1008975.nupkg.sha512"
+    }
+  }
+}

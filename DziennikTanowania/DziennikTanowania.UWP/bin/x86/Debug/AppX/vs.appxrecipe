@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-08T13:02:17.843</Modified>
+      <Modified>2019-05-21T20:11:32.561</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\DziennikTanowania.UWP.exe">
       <PackagePath>entrypoint\DziennikTanowania.UWP.exe</PackagePath>
-      <Modified>2019-01-08T13:02:17.253</Modified>
+      <Modified>2019-05-21T20:11:30.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\.nuget\packages\fluentvalidation\8.1.2\lib\netstandard2.0\FluentValidation.dll">
       <PackagePath>FluentValidation.dll</PackagePath>
@@ -740,7 +740,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\bin\Debug\netstandard2.0\DziennikTanowania.dll">
       <PackagePath>DziennikTanowania.dll</PackagePath>
-      <Modified>2019-01-08T13:02:13.293</Modified>
+      <Modified>2019-05-21T20:11:25.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -895,11 +895,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-01-08T13:02:17.067</Modified>
+      <Modified>2019-05-21T20:11:30.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-01-08T13:02:17.067</Modified>
+      <Modified>2019-05-21T20:11:30.534</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -911,11 +911,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-01-03T21:41:38.337</Modified>
+      <Modified>2019-05-21T20:11:31.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania.UWP\bin\x86\Debug\Core\DziennikTanowania.UWP.exe">
       <PackagePath>DziennikTanowania.UWP.exe</PackagePath>
-      <Modified>2019-01-08T13:02:17.839</Modified>
+      <Modified>2019-05-21T20:11:32.556</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

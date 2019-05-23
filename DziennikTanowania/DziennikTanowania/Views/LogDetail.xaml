@@ -18,8 +18,7 @@
             <Entry Text="{Binding PricePerLiter}"  FontSize="Small" Keyboard="Numeric"/>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
-                <Switch IsToggled="{Binding RefuelingToFull}" VerticalOptions="Center" HorizontalOptions="Start" />
-                <Label Text="Pełne tankowanie" VerticalOptions="Center" HorizontalOptions="Fill"/>
+                <Picker  Title="Wybierz typ tankowania" ItemsSource="{Binding RefuelingType}" SelectedItem="{Binding SelectedRefuelingType }" SelectedIndexChanged="Picker_SelectedIndexChanged" FontSize="Small" VerticalOptions="Center" HorizontalOptions="Start"/>
             </StackLayout>
             <Button Text="Zapisz" Command="{Binding UpdateFuelingLogCommand}"/>
             <Button Text="Usuń" Command="{Binding DeleteFuelingLogCommand}"/>

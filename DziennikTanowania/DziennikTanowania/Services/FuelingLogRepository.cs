@@ -72,10 +72,10 @@ namespace DziennikTanowania.Services
         {   
             
                 FuelingLog fuelingLog = new FuelingLog();
-                for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                for (int i = 0; i < fuelingLogs.Count-1; i++)
                 {
                     var distanceFromLastRefueling = fuelingLogs[i].DistanceFromLastRefueling;
-                    var liters = fuelingLogs[i].AmountOfRefueledFuel;
+                    var liters = fuelingLogs[i+1].AmountOfRefueledFuel;
                     double milesPerLiter = (liters / distanceFromLastRefueling) * 100;
                     fuelingLog = GetFuelingLogData(fuelingLogs[i].Id);
                     fuelingLog.MilesPerLiter = milesPerLiter;
@@ -93,7 +93,7 @@ namespace DziennikTanowania.Services
             else
             {
                 decimal totalExpenses = 0;
-                for(int i=0; i< fuelingLogs.Count - 1; i++)
+                for(int i=0; i< fuelingLogs.Count; i++)
                 {
                     totalExpenses += fuelingLogs[i].TotalPrice;
                 }
@@ -108,7 +108,7 @@ namespace DziennikTanowania.Services
             else
             {
                 double totalLiters = 0;
-                for(int i=0; i< fuelingLogs.Count - 1; i++)
+                for(int i=0; i< fuelingLogs.Count; i++)
                 {
                     totalLiters += fuelingLogs[i].AmountOfRefueledFuel;
                 }
@@ -140,7 +140,7 @@ namespace DziennikTanowania.Services
             else
             {
                 int numberOfRefuelings = 0;
-                for(int i=0; i<fuelingLogs.Count -1; i++)
+                for(int i=0; i<fuelingLogs.Count; i++)
                 {
                     numberOfRefuelings++;
                 }
@@ -159,7 +159,7 @@ namespace DziennikTanowania.Services
                 {
                     double maxLiters = 0;
                     maxLiters = fuelingLogs[1].AmountOfRefueledFuel;
-                    for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                    for (int i = 0; i < fuelingLogs.Count; i++)
                     {
 
                         maxLiters = Math.Max(maxLiters, fuelingLogs[i].AmountOfRefueledFuel);
@@ -186,7 +186,7 @@ namespace DziennikTanowania.Services
                 {
                     double minLiters = 0;
                     minLiters = fuelingLogs[1].AmountOfRefueledFuel;
-                    for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                    for (int i = 0; i < fuelingLogs.Count; i++)
                     {
                         minLiters = Math.Min(minLiters, fuelingLogs[i].AmountOfRefueledFuel);
                     }
@@ -213,7 +213,7 @@ namespace DziennikTanowania.Services
                 {
                     decimal minPrice = 0;
                     minPrice = fuelingLogs[1].PricePerLiter;
-                    for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                    for (int i = 0; i < fuelingLogs.Count; i++)
                     {
                         minPrice = Math.Min(minPrice, fuelingLogs[i].PricePerLiter);
                     }
@@ -238,7 +238,7 @@ namespace DziennikTanowania.Services
                 {
                     decimal maxPrice = 0;
                     maxPrice = fuelingLogs[1].PricePerLiter;
-                    for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                    for (int i = 0; i < fuelingLogs.Count; i++)
                     {
                         maxPrice = Math.Max(maxPrice, fuelingLogs[i].PricePerLiter);
                     }
@@ -261,10 +261,10 @@ namespace DziennikTanowania.Services
                 double distance = 0;
                 double liters = 0;
                 double _distanceForOneLiter = 0;
-                for (int i = 0; i < fuelingLogs.Count-1; i++)
+                for (int i = 0; i < fuelingLogs.Count; i++)
                 {
                     distance += fuelingLogs[i].DistanceFromLastRefueling;
-                    liters += fuelingLogs[i].AmountOfRefueledFuel;
+                    if(i+1<fuelingLogs.Count)liters += fuelingLogs[i+1].AmountOfRefueledFuel;
                 }
 
                 _distanceForOneLiter = distance / liters;
@@ -283,14 +283,14 @@ namespace DziennikTanowania.Services
                 double distance = 0;
                 decimal totalPrice = 0;
                 decimal _averageCostOfOneKilometer = 0;
-                for (int i = 0; i < fuelingLogs.Count-1; i++)
+                for (int i = 0; i < fuelingLogs.Count; i++)
                 {
                     distance += fuelingLogs[i].DistanceFromLastRefueling;
                     totalPrice += fuelingLogs[i].TotalPrice;
                 }
                 try
                 {
-                    _averageCostOfOneKilometer = (decimal)distance / totalPrice;
+                    _averageCostOfOneKilometer = totalPrice / (decimal)distance;
                 }
                 catch(DivideByZeroException e)
                 {
@@ -312,17 +312,25 @@ namespace DziennikTanowania.Services
 
         public double TotalMilesPerLiter(List<FuelingLog> fuelingLogs)
         {
+            
             if (fuelingLogs.Count == 0) return 0;
             else
             {
                 double _totalMilesPerLiter = 0;
-                double milesPerLiter = 0;
-                for (int i = 0; i < fuelingLogs.Count - 1; i++)
+                double liters = 0;
+                double distance = fuelingLogs[0].ActualMileage;
+                for (int i = 0; i < fuelingLogs.Count; i++)
                 {
-                    milesPerLiter += fuelingLogs[i].MilesPerLiter;
+                    
+                    if (fuelingLogs[i].SelecteRefuelingType.Equals("Rezerwa"))
+                    {
+                        _totalMilesPerLiter =( liters / (distance - fuelingLogs[i].ActualMileage)) *100;
+                    }
+                    if(i+1<fuelingLogs.Count)liters += fuelingLogs[i+1].AmountOfRefueledFuel;
+
                 }
 
-                _totalMilesPerLiter = milesPerLiter / (fuelingLogs.Count - 1);
+                
                 if (double.IsNaN(_totalMilesPerLiter)) return 0;
                 else return _totalMilesPerLiter;
 

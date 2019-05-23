@@ -8,19 +8,22 @@ using SQLite;
 
 namespace DziennikTanowania.Models
 {
-    
+
     [Table("FuelingLog")]
-    public class FuelingLog 
+    public class FuelingLog
     {
         private decimal _totalPrice;
         
+
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public int ActualMileage { get; set; }
         public double AmountOfRefueledFuel { get; set; }
         public decimal PricePerLiter { get; set; }
         public DateTime DateTime { get; set; } = DateTime.Today;
-        public bool RefuealingToFull { get; set; }
+        public string[] RefuelingType { get; set; } = { "Rezerwa","Dotankowanie","Pomoc" };
+        public string SelecteRefuelingType { get; set; }
+
         public decimal TotalPrice
         {
             get => _totalPrice;

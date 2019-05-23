@@ -26,16 +26,14 @@ namespace DziennikTanowania.ViewModels
         private double _totalMilesPerLiter = -1;
         private double _bestPartialMilesPerLiter = -1;
         private double _worstPartialMilesPerLiter = -1;
-        private int _tankCapacity;
-
-        public ICommand SetTankCapacityCommand { get; private set; }
+        
 
         public StatisticsViewModel(INavigation navigation)
         {
             _navigation = navigation;
             _fuelingLog = new FuelingLog();
             _fuelingLogRepository = new FuelingLogRepository();
-            //SetTankCapacityCommand = new Command(async () => await  );
+            
 
             FetchLogs();
         }

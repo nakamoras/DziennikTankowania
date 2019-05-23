@@ -10,7 +10,7 @@ C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowani
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.csproj.CoreCompileInputs.cache
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.AssemblyInfoInputs.cache
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.AssemblyInfo.cs
-C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.dll
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.pdb
 C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\DziennikTanowania.csprojAssemblyReference.cache
+C:\Users\wojte\source\repos\DziennikTanowania\DziennikTanowania\DziennikTanowania\obj\Debug\netstandard2.0\XamlC.stamp

@@ -59,13 +59,23 @@ namespace DziennikTanowania.ViewModels
             }
         }
 
-        public bool RefuelingToFull
+        public string[] RefuelingType
         {
-            get => _fuelingLog.RefuealingToFull;
+            get => _fuelingLog.RefuelingType;
             set
             {
-                _fuelingLog.RefuealingToFull = value;
-                OnPropertyChanged("RefuelingToFull");
+                _fuelingLog.RefuelingType = value;
+                OnPropertyChanged("RefuelingType");
+            }
+        }
+
+        public string SelectedRefuelingType
+        {
+            get => _fuelingLog.SelecteRefuelingType;
+            set
+            {
+                _fuelingLog.SelecteRefuelingType = value;
+                OnPropertyChanged("SelectedRefuelingType");
             }
         }
 

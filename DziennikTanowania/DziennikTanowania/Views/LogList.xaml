@@ -37,7 +37,7 @@
                                     LineBreakMode="NoWrap" 
                                     FontAttributes="Bold"
                                     FontSize="Small" />
-                                        <Label Text="{Binding MilesPerLiter} " 
+                                        <Label Text="{Binding MilesPerLiter , StringFormat='{0:F2}'} " 
                                     LineBreakMode="NoWrap"
                                     HorizontalOptions="CenterAndExpand"           
                                     FontSize="Large" 
@@ -50,7 +50,7 @@
                                     
                                     
                                     <StackLayout  VerticalOptions="Start" HorizontalOptions="FillAndExpand">
-                                        <Label Text="{Binding ActualMileage}" FontAttributes="Bold" FontSize="Medium"  Margin="10,0"/>
+                                        <Label Text="{Binding ActualMileage , StringFormat='{0}km'}" FontAttributes="Bold" FontSize="Medium"  Margin="10,0"/>
                                         <StackLayout Orientation="Horizontal">
                                             <Label Text="{Binding DistanceFromLastRefueling , StringFormat='+{0}km' }" FontSize="Small" FontAttributes="Bold" />
                                             <BoxView Color="Gray" WidthRequest="1" Margin="0,3" HeightRequest="10"/>
